@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Button, Card } from 'react-bootstrap';
@@ -8,12 +8,11 @@ const Leagues = (props) => {
     const { idLeague, strLeagueAlternate, strSport } = props.leagues;
 
     const history = useHistory();
-    const showLeagueDetails = idLeague => {
-        const url  = `leagues/${idLeague}`;
+    const showLeagueDetails = id => {
+        const url  = `leagues/${id}`;
         history.push(url);
     }
-
-
+ 
     return (
         <div className="container">
             <Card style={{ width: '18rem' }}>

@@ -10,16 +10,7 @@ const Home = () => {
         .then (res => res.json())
         .then(data => setLeagues(data.leagues))
     },[])
-
-    // const [leagueDetails, setLeagueDetails] = useState({}); 
-
-    // let idLeague;
-    // useEffect(()=> {
-    //     const url = `https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${idLeague}`;
-    //     fetch(url)
-    //     .then(res => res.json())
-    //     .then(data => setLeagueDetails(data))
-    // },[idLeague])
+    
 
     return (
         <div>   
@@ -28,9 +19,8 @@ const Home = () => {
             {
                 leagues.map(le => <Leagues leagues={le}></Leagues>)
             }
-            {/* {
-                leagueDetails.map(ld => <Leagues leagueDetail={ld}></Leagues>)
-            } */}
+           
+            
         </div>
     );
 };
