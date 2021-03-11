@@ -15,13 +15,7 @@ const Footer = () => {
             .then(data => setleagueDetails(data.leagues[0]))
     }, [idLeague])
 
-    return (
-        <div className="footer">
-            <div className="twitter"><a href={leagueDetails.strTwitter}><FontAwesomeIcon icon={faTwitter} /></a></div>
-            <div className="facebook"><a href={leagueDetails.strYoutube}><FontAwesomeIcon icon={faFacebook} /></a></div>
-            <div className="youtube"> <a href={leagueDetails.strFacebook}><FontAwesomeIcon icon={faYoutube} /></a></div>
-        </div>
-    );
+   
 };
 
 export default Footer;

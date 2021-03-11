@@ -5,3 +5,12 @@
     margin: 0 auto;
     padding: 1rem;
 }
+
+
+/*  Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 576px) {
+    .home-container {
+      background-color: lightblue;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

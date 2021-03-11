@@ -39,5 +39,19 @@
 }
 .description{
     width:70%;
-    margin: 20px 200px;
+    margin: 50px 200px;
 }
+
+
+/*  Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 576px) {
+    .card-container{
+        margin:10px;
+        height: 530px;
+        width: 95%;
+    }
+    .description{
+        width: 95%;
+        margin:20px;
+    }
+  }
