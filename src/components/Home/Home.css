@@ -1,16 +1,17 @@
 .home-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 0 auto;
     padding: 1rem;
+    background-color: lightblue;
 }
-
 
 /*  Small devices (landscape phones, 576px and up) */
 @media only screen and (max-width: 576px) {
     .home-container {
       background-color: lightblue;
       grid-template-columns: repeat(1, 1fr);
+      
     }
   }

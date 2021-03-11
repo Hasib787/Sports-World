@@ -2,7 +2,6 @@ import React from 'react';
 import banner from '../../images/Photo/banner.jpg';
 import './Header.css'
 
-
 const Header = () => {
     return (
         <div className="header-container">

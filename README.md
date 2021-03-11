@@ -1,4 +1,4 @@
 # Name: Sports World
-# Featchers: 
-1. Show leagua 
+# Features: 
+1. Show all leagues 
 2. show leagus details

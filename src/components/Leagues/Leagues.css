@@ -1,6 +1,18 @@
-Card{
+.card{
     text-align:center;
+    margin-left: 80px;
+    height: 340px;
+    box-shadow: 5px 10px 8px #888888;
+}
+.card:hover{
+    background-color: rgb(110, 192, 247);
+    color:white;
+}
+.card .card-image{
+    height: 140px;
+    width: 160px;
+    margin: 15px 65px;
 }
 .sports-text{
-    color: black;
+    margin-left: 15px;
 }

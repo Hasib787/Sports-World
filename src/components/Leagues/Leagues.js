@@ -10,10 +10,10 @@ const Leagues = (props) => {
 
     const history = useHistory();
     const showLeagueDetails = id => {
-        const url  = `leagues/${id}`;
+        const url = `leagues/${id}`;
         history.push(url);
     }
-    
+
     const [leagueDetails, setleagueDetails] = useState([])
 
     useEffect(() => {
@@ -24,16 +24,14 @@ const Leagues = (props) => {
     }, [idLeague])
 
     return (
-            <Card className="card" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={leagueDetails.strBadge} />
-                <Card.Body>
-                    <Card.Title>{strLeagueAlternate}</Card.Title>
-                    <Card.Text>
-                       <p className="sports-text">Sports type: {strSport}</p> 
-                    </Card.Text>
-                    <Button onClick={()=> showLeagueDetails(idLeague)} variant="primary">Explore <FontAwesomeIcon icon={faArrowRight} /></Button>
-                </Card.Body>
-            </Card>
+        <Card className="card" style={{ width: '18rem' }}>
+            <Card.Img className="card-image" variant="top" src={leagueDetails.strBadge} />
+            <Card.Body>
+                <Card.Title>{strLeagueAlternate}</Card.Title>
+                <p className="sports-text">Sports type: {strSport}</p>
+                <Button onClick={() => showLeagueDetails(idLeague)} variant="primary">Explore <FontAwesomeIcon icon={faArrowRight} /></Button>
+            </Card.Body>
+        </Card>
 
     );
 };
