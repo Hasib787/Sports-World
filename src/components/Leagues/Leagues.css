@@ -1,4 +1,6 @@
-.container{
-    position: relative;
-    margin-left: 10em ;
+Card{
+    text-align:center;
+}
+.sports-text{
+    color: black;
 }

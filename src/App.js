@@ -6,7 +6,6 @@ import {
 import './App.css';
 import Home from "./components/Home/Home";
 import LeagueDetails from "./components/LeagueDetails/LeagueDetails";
-import Leagues from "./components/Leagues/Leagues";
 import NotFound from "./components/NotFound/NotFound";
 
 function App() {

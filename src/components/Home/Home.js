@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import Leagues from '../Leagues/Leagues';
+import './Home.css'
 
 const Home = () => {
     const [leagues, setLeagues] = useState([]);
@@ -15,12 +16,12 @@ const Home = () => {
     return (
         <div>   
             <Header></Header>
-            <h2>All Leagues:{leagues.length}</h2> 
-            {
+           <div className="home-container">
+           {
                 leagues.map(le => <Leagues leagues={le}></Leagues>)
             }
+           </div>
            
-            
         </div>
     );
 };

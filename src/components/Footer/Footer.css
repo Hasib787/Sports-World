@@ -1,0 +1,38 @@
+.footer{
+    display:flex;
+    justify-content:center;
+    margin: 20px;
+}
+.twitter{
+    background-color: rgb(97, 153, 245);
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    margin: 8px;
+}
+.twitter a{
+    color: white;
+    margin: 7px;
+}
+.facebook {
+    height:30px;
+    width:30px;
+    background-color: blue;
+    border-radius: 50%;
+    margin: 8px;
+}
+.facebook a{
+    color: white;
+    margin: 7px;
+}
+.youtube{
+    background-color: red;
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    margin: 8px;
+}
+.youtube a{
+    color: white;
+    margin: 7px;
+}

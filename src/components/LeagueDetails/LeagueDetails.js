@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../Header/Header';
 import { useParams } from 'react-router';
-import image from '../../images/Photo/male.png';
+import imageMale from '../../images/Photo/male.png';
+import imageFemle from '../../images/Photo/female.png';
+
 import './LeagueDetails.css';
+import Footer from '../Footer/Footer';
+import banner from '../../images/Photo/banner.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const LeagueDetails = () => {
 
@@ -17,29 +22,40 @@ const LeagueDetails = () => {
             .then(data => setleagueDetails(data.leagues[0]))
     }, [idLeague])
 
+    
 
-    return (
-        <div>
-            <Header></Header>
-            {/* <div className="header-logo">
-                <img src={leagueDetails.strBadge} alt="" />
-            </div> */}
+        return (
+            <div>
+                <div className="header-container">
+                    <img src={banner} alt="" />
+                    <div className="logo">
+                        <img src={leagueDetails.strBadge} alt="" />
+                    </div>
+                </div>
 
-            <div className="card-container">
-                <div className="card-text">
-                    <p>Founded: {leagueDetails.intFormedYear}</p>
-                    <p>Country: {leagueDetails.strCountry}</p>
-                    <p>Spote Type: {leagueDetails.strSport}</p>
-                    <p>Gender: {leagueDetails.strGender}</p>
+                <div className="card-container">
+                    <div className="card-text">
+                        <h1>{leagueDetails.strLeagueAlternate}</h1>
+                        <p>Founded: {leagueDetails.intFormedYear}</p>
+                        <p>Country: {leagueDetails.strCountry}</p>
+                        <p>Spote Type: {leagueDetails.strSport}</p>
+                        <p>Gender: {leagueDetails.strGender}</p>
+                    </div>
+                    <div className="card-img">
+                        {
+                            leagueDetails.strGender ? <img src={imageMale} alt="" /> : <img src={imageFemle} alt="" />
+                        }
+                        
+                    </div>
                 </div>
-                <div className="card-img">
-                    <img src={image} alt=""/>
-                </div>
+                <div className="description"> <p>{leagueDetails.strDescriptionEN}</p></div>
+
+                <Footer>
+
+                </Footer>
+
             </div>
-            <div className="description"> <p>{leagueDetails.strDescriptionEN}</p></div>
-
-        </div>
-    );
+        );
 };
 
 export default LeagueDetails;
